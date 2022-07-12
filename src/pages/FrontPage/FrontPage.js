@@ -15,7 +15,7 @@ const FrontPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 160px;
-  padding: 54px 54px 120px 54px;
+  padding: 54px 54px 180px 54px;
   max-width: 1098px;
   border: 1px #00874c solid;
   border-radius: 36px;
