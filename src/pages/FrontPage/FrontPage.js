@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import trip from "../../assets/illustrations/Trip-rafiki.svg";
 
@@ -45,6 +46,7 @@ const LeftButton = styled.button`
   border: none;
   padding: 8px 20px;
   margin-right: 40px;
+  cursor: pointer;
 `;
 
 const RightButton = styled.button`
@@ -59,10 +61,12 @@ const RightButton = styled.button`
 
 // Delete comment later. Right now we have not decided how to do styling. Could do this or Sass if easier for everyone
 const FrontPage = () => {
-  const startNewTrip = () => {
-    // placeholder for link to next page
-    console.log("go to next page");
-  };
+
+  const navigate = useNavigate()
+  // const startNewTrip = () => {
+  //   // placeholder for link to next page
+  //   console.log("go to next page");
+  // };
   return (
     <FrontPageWrapper>
       <FrontPageContainer>
@@ -87,7 +91,7 @@ const FrontPage = () => {
         </ul>
         <FrontPageImage src={trip} alt="trip" />
         <div>
-          <LeftButton onClick={startNewTrip}>Plan a new Trip</LeftButton>
+          <LeftButton onClick={() => {navigate('/newtrip')}}>Plan a new Trip</LeftButton>
           <RightButton>Join a friend's trip</RightButton>
         </div>
       </FrontPageContainer>
