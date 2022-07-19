@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+/* font-family: 'Libre Baskerville', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+.checklistContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.pwLogo {
+  display: flex;
+  flex-direction: row;
+  font-family: "Libre Baskerville", serif;
+  color: #677e74;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.pwLogo img {
+  height: 5rem;
+  width: 4.6rem;
+}
+
+.tripTitle {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-color: #677e74;
+  background-image: linear-gradient(
+    180deg,
+    rgba(44, 44, 44, 0) 44.36%,
+    #222222 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .tripTitle img {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: linear-gradient(
+    180deg,
+    rgba(44, 44, 44, 0) 44.36%,
+    #000000 100%
+  );
+  z-index: 1;
+} */
+
+.tripInfo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  font-family: "Libre Baskerville", serif;
+  color: #fcfcfc;
+  margin: 0 2rem;
+}
+
+.tripInfo h4 {
+  margin-top: 0;
+}
+
+.checklistButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.checklistButtons button {
+  width: 30%;
+  height: 4rem;
+  background: transparent;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #394641;
+  cursor: pointer;
+}
+
+#checklistBtn {
+  border-bottom: 2px solid #00a05a;
+  color: #00a05a;
+}
