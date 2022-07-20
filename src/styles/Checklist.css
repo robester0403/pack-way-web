@@ -4,9 +4,10 @@
 font-family: 'Roboto', sans-serif;
 font-family: 'Source Sans Pro', sans-serif; */
 
-.checklistContainer {
+.container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -37,21 +38,6 @@ font-family: 'Source Sans Pro', sans-serif; */
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* .tripTitle img {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background-color: linear-gradient(
-    180deg,
-    rgba(44, 44, 44, 0) 44.36%,
-    #000000 100%
-  );
-  z-index: 1;
-} */
 
 .tripInfo {
   display: flex;
@@ -90,4 +76,58 @@ font-family: 'Source Sans Pro', sans-serif; */
 #checklistBtn {
   border-bottom: 2px solid #00a05a;
   color: #00a05a;
+}
+
+.checklistContainer {
+  margin: 2rem 3rem;
+}
+
+.packingChecklist {
+  width: 100%;
+}
+
+.checklistHeaders {
+  width: 100%;
+}
+
+#itemsTH {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+#itemsTH button {
+  margin-left: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.friendTH {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+
+.packingTasks {
+  list-style-type: none;
+  /* display: none; */
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#packingDesignation {
+  display: flex;
+  flex-direction: column;
+}
+
+.packingTasks {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.packingTasks li {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: start;
 }
