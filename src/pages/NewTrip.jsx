@@ -3,7 +3,16 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import FlashlightOnIcon from "@mui/icons-material/FlashlightOn";
+import { FaBed } from "react-icons/fa";
+import { TbHanger } from "react-icons/tb";
+import { RiFirstAidKitFill } from "react-icons/ri";
+import { MdOutdoorGrill } from "react-icons/md";
+import { FaUtensils } from "react-icons/fa";
+import { FaHandsWash } from "react-icons/fa";
+import { MdFlashlightOn } from "react-icons/md";
+import { FaHiking } from "react-icons/fa";
+import { FaHammer } from "react-icons/fa";
+import { BiSwim } from "react-icons/bi";
 import "../styles/NewTrip.css";
 
 const schema = yup.object().shape({
@@ -22,6 +31,8 @@ function NewTrip() {
     resolver: yupResolver(schema),
   });
 
+  const [checked, setChecked] = useState(false);
+
   // const [formData, setFormData] = useState({
   //     tripname: "",
   //     destination: ""
@@ -35,6 +46,15 @@ function NewTrip() {
   //       [e.target.name]: e.target.value,
   //     }))
   //   }
+
+  const handleChange = (e) => {
+    if (checked) {
+      console.log("isChecked");
+    } else {
+      console.log("is NOT checked");
+    }
+    setChecked((checked) => !checked);
+  };
 
   const onSubmit = (data) => {
     console.log({ data });
@@ -80,50 +100,51 @@ function NewTrip() {
                 type="checkbox"
                 name="addCategories"
                 id="addCategories"
-                checked
+                onChange={handleChange()}
+                checked={checked}
               ></input>
             </div>
           </div>
 
           <div className="categories">
             <div className="iconBox">
-              <i className="fa-solid fa-bed fa-2xl"></i>
+              <FaBed size={40} />
               <h4>SLEEPING</h4>
             </div>
             <div className="iconBox">
-              <i className="fa-solid fa-shirt fa-2xl"></i>
+              <TbHanger size={40} />
               <h4>CLOTHING</h4>
             </div>
             <div className="iconBox">
-              <i className="fa-solid fa-briefcase-medical fa-2xl"></i>
+              <RiFirstAidKitFill size={30} />
               <h4>FIRST-AID</h4>
             </div>
             <div className="iconBox">
-              <i class="fa-solid fa-fire-burner fa-2xl"></i>
+              <MdOutdoorGrill size={40} />
               <h4>KITCHEN</h4>
             </div>
             <div className="iconBox">
-              <i class="fa-solid fa-utensils fa-2xl"></i>
+              <FaUtensils size={30} />
               <h4>COOKING</h4>
             </div>
             <div className="iconBox">
-              <i class="fa-solid fa-hands-bubbles fa-2xl"></i>
+              <FaHandsWash size={40} />
               <h4>TOILETRIES</h4>
             </div>
             <div className="iconBox">
-              <FlashlightOnIcon />
+              <MdFlashlightOn size={40} />
               <h4>TOILETRIES</h4>
             </div>
             <div className="iconBox">
-              <i className="fa-solid fa-person-hiking fa-2xl"></i>
+              <FaHiking size={35} />
               <h4>HIKING</h4>
             </div>
             <div className="iconBox">
-              <i className="fa-solid fa-hammer fa-2xl"></i>
+              <FaHammer size={35} />
               <h4>TOOLS</h4>
             </div>
             <div className="iconBox">
-              <i className="fa-solid fa-person-swimming fa-2xl"></i>
+              <BiSwim size={40} />
               <h4>SWIMMING</h4>
             </div>
           </div>

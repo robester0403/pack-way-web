@@ -1,0 +1,87 @@
+[
+  {
+    "category": "Sleeping",
+    "items": [
+      "sleeping bag",
+      "tent",
+      "sleeping bag",
+      "pillow",
+      "air pump",
+      "bed sheet",
+      "blanket"
+    ]
+  },
+  {
+    "category": "Clothing",
+    "items": [
+      "windbreaker",
+      "sweater",
+      "t-shirt",
+      "swimming suit",
+      "hat",
+      "cap",
+      "sweatpants",
+      "slippers"
+    ]
+  },
+  {
+    "category": "First-Aid",
+    "items": ["bandaids", "Moleskin", "bandages"]
+  },
+  {
+    "category": "Kitchen",
+    "items": [
+      "stove",
+      "stove fuel",
+      "busket",
+      "knife",
+      "pot",
+      "pan",
+      "cooler",
+      "ice",
+      "dish soap",
+      "zip-lock",
+      "aluminum foil"
+    ]
+  },
+  {
+    "category": "Cooking",
+    "items": ["oil", "salt & pepper", "herbs & spices"]
+  },
+  {
+    "category": "Toiletries",
+    "items": ["soap", "toilet paper", "hand sanitizer", "sunscreen"]
+  },
+  {
+    "category": "Lighting",
+    "items": ["flashlight", "solar-powered lamp", "batteries"]
+  },
+  {
+    "category": "Hiking",
+    "items": ["hiking shoes", "trekking poles", "daypack", "trail map"]
+  },
+  {
+    "category": "Tools",
+    "items": [
+      "Duct tape",
+      "rope or twine (clothesline)",
+      "bungee cords",
+      "hatchet",
+      "screwdriver or multi-tool",
+      "sewing kit",
+      "clothes pins",
+      "compass"
+    ]
+  },
+  {
+    "category": "Swimming",
+    "items": [
+      "swimsuit",
+      "goggles",
+      "snorkel",
+      "water shoes",
+      "life jacket",
+      "beach towel"
+    ]
+  }
+]
