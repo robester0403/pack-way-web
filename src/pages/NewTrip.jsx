@@ -13,12 +13,13 @@ import { MdFlashlightOn } from "react-icons/md";
 import { FaHiking } from "react-icons/fa";
 import { FaHammer } from "react-icons/fa";
 import { BiSwim } from "react-icons/bi";
+import Toggle from "../components/Toggle";
 import "../styles/NewTrip.css";
+import { ConstructionOutlined } from "@mui/icons-material";
 
 const schema = yup.object().shape({
   tripName: yup.string().required(),
   destination: yup.string().required(),
-  addCategories: yup.boolean(true),
 });
 
 function NewTrip() {
@@ -31,7 +32,7 @@ function NewTrip() {
     resolver: yupResolver(schema),
   });
 
-  const [checked, setChecked] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
 
   // const [formData, setFormData] = useState({
   //     tripname: "",
@@ -46,15 +47,6 @@ function NewTrip() {
   //       [e.target.name]: e.target.value,
   //     }))
   //   }
-
-  const handleChange = (e) => {
-    if (checked) {
-      console.log("isChecked");
-    } else {
-      console.log("is NOT checked");
-    }
-    setChecked((checked) => !checked);
-  };
 
   const onSubmit = (data) => {
     console.log({ data });
@@ -95,18 +87,17 @@ function NewTrip() {
               <p>categories can be added or removed later</p>
             </div>
             <div className="formRowCheck">
-              <input
-                {...register("addCategories")}
-                type="checkbox"
-                name="addCategories"
-                id="addCategories"
-                onChange={handleChange()}
-                checked={checked}
-              ></input>
+              <Toggle
+                rounded={true}
+                isToggled={isToggled}
+                onToggle={() => {
+                  setIsToggled(!isToggled);
+                }}
+              />
             </div>
           </div>
 
-          <div className="categories">
+          <div className="categories" id={isToggled ? "active" : "inactive"}>
             <div className="iconBox">
               <FaBed size={40} />
               <h4>SLEEPING</h4>
