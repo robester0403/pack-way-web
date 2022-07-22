@@ -146,3 +146,27 @@ font-family: 'Source Sans Pro', sans-serif; */
   color: #00a05a;
   cursor: pointer;
 }
+
+#inactive .iconBox {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid #f3f5f4;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  cursor: not-allowed;
+  color: f3f5f4;
+}
+
+#inactive .iconBox svg {
+  color: #e2e2e2;
+}
+
+#inactive .iconBox h4 {
+  color: #e2e2e2;
+}
